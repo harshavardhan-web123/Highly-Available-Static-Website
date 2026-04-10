@@ -1,0 +1,26 @@
+🔷 Explanation of Architecture
+🔹 1. EC2 Instance (Primary - AZ-1)
+Hosts static website using Apache
+Stores website files in EBS volume
+🔹 2. EBS Volume
+Used for storing website data
+Attached to EC2 instance
+🔹 3. Snapshot & AMI
+Snapshot → Backup of data
+AMI → Backup of full instance
+Used for recovery
+🔹 4. Amazon S3
+Stores backup data securely
+Bucket is private
+Used for additional backup layer
+🔹 5. EC2 Instance (Secondary - AZ-2)
+Launched using AMI
+Runs in different Availability Zone
+Ensures high availability
+🔥 Key Features
+
+✅ High availability across AZs
+✅ Backup using Snapshot & AMI
+✅ Secure storage in S3
+✅ Same website replication
+✅ Disaster recovery ready
