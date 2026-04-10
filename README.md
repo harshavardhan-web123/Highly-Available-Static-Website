@@ -128,6 +128,8 @@ Add Load Balancer (ALB)
 Use Auto Scaling Group
 Implement CloudFront CDN
 Enable HTTPS with SSL
+
+
 👨‍💻 Author
 
 Harshavardhan
