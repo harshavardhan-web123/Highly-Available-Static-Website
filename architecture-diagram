@@ -1,0 +1,30 @@
+                     End Users (Browser)
+                            │
+                            ▼
+                ┌──────────────────────────┐
+                │   EC2 Instance (AZ-1)    │
+                │  Apache Web Server       │
+                │  Static Website Hosted   │
+                └──────────┬───────────────┘
+                           │
+                           ▼
+                   EBS Volume (Storage)
+                           │
+        ┌──────────────────┴──────────────────┐
+        ▼                                     ▼
+   EBS Snapshot                        AMI (Backup Image)
+        │                                     │
+        ▼                                     ▼
+   Backup Stored                      Used to Launch EC2
+        │                                     │
+        └───────────────┬─────────────────────┘
+                        ▼
+                Amazon S3 (Backup Storage)
+                (Private Bucket)
+                        │
+                        ▼
+        ┌────────────────────────────────────┐
+        │   EC2 Instance (AZ-2 - Recovery)   │
+        │   Launched using AMI               │
+        │   Same Static Website              │
+        └────────────────────────────────────┘
